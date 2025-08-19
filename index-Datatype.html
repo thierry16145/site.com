@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Datatype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <img src="img/Design sem nome.png" alt="MySQL" width="300" >
+        <a href="index.html">
+            <button>Início</button>
+        </a>
+        <a href="index-DDL.html">
+            <button>Comandos DDL</button>
+        </a>
+        <a href="index-DML.html">
+            <button>Comandos DML</button>
+        </a>
+        <a href="index-DCL.html">
+            <button>Comandos DCL</button>
+        </a>
+        <a href="index-function.html">
+            <button>Função Agregada</button>
+        </a>
+        <a href="index-Datatype.html">
+            <button>Tipo de Data</button>
+        </a>
+        <a href="index-final.html">
+            <button>Finalização</button>
+        </a>
+        
+    </nav>
+
+    <main class="content">
+        <div class="overlay">
+            <h1>Guia de SQL</h1>
+            
+            <h2>Tipos de Dados: As Gavetas da Biblioteca</h2>
+            <p>
+                Pense nos tipos de dados como diferentes tipos de gavetas para guardar informações. Cada gaveta tem um formato específico para o que vai dentro: uma para números, outra para textos, outra para datas, etc. Escolher a gaveta certa é fundamental para manter tudo organizado.
+            </p>
+            
+            <h3> Números</h3>
+            <ul>
+                <li><code>INT</code>: Para números inteiros. Ex: <code>idade = 25</code></li>
+                <li><code>BIGINT</code>: Para números inteiros muito grandes. Ex: <code>CPF = 12345678901</code></li>
+                <li><code>DECIMAL(10,2)</code>: Para números com vírgula e precisão exata, como dinheiro. Ex: <code>preço = 49.90</code></li>
+                <li><code>FLOAT/DOUBLE</code>: Para números com vírgula e precisão aproximada. Ex: <code>peso = 1.75</code></li>
+                <li><code>BOOLEAN</code>: Para valores de verdadeiro ou falso (geralmente 1 ou 0). Ex: <code>ativo = 1</code></li>
+            </ul>
+
+            <h3> Data e Hora</h3>
+            <ul>
+                <li><code>DATE</code>: Para armazenar apenas a data. Ex: <code>2025-08-19</code></li>
+                <li><code>DATETIME</code>: Para armazenar data e hora juntas. Ex: <code>2025-08-19 15:30:00</code></li>
+                <li><code>TIMESTAMP</code>: Similar ao DATETIME, mas é atualizado automaticamente em algumas operações.</li>
+                <li><code>TIME</code>: Para armazenar apenas a hora. Ex: <code>15:30:00</code></li>
+                <li><code>YEAR</code>: Para armazenar apenas o ano. Ex: <code>2025</code></li>
+            </ul>
+
+            <h3> Texto</h3>
+            <ul>
+                <li><code>CHAR(n)</code>: Para textos de tamanho fixo. Ex: <code>código = 'AB123'</code></li>
+                <li><code>VARCHAR(n)</code>: Para textos de tamanho variável (mais comum). Ex: <code>nome = 'Thierry'</code></li>
+                <li><code>TEXT</code>: Para textos muito grandes, como descrições. Ex: <code>descrição = "Produto..."</code></li>
+                <li><code>ENUM</code>: Para escolher uma única opção de uma lista. Ex: <code>status = 'sim'</code></li>
+                <li><code>SET</code>: Para escolher várias opções de uma lista. Ex: <code>hobbies = 'a,c'</code></li>
+            </ul>
+
+            <h3> Arquivos</h3>
+            <ul>
+                <li><code>BLOB</code>: Para armazenar dados binários grandes, como fotos, PDFs ou músicas. Ex: <code>foto_de_perfil</code></li>
+            </ul>
+        </div>
+    </main>
+</body>
+</html>

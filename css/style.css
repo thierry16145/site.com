@@ -1,0 +1,130 @@
+
+body {
+        
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fefefe;
+    
+    
+    background-image: linear-gradient( to right, #2e2e2e 20%, #575757 50%, #8f8f8f 80%);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    background-repeat: no-repeat;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: rgba(14, 10, 14, 0.6);
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 15px; 
+    backdrop-filter: blur(5px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.sidebar a {
+    text-decoration: none;
+    width: 100%;
+}
+
+
+.content {
+    flex-grow: 1;
+    padding: 40px;
+    overflow-y: auto; 
+}
+
+
+.overlay {
+    background-color: rgba(40, 40, 40, 0.5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 15px;
+    padding: 20px 40px;
+    max-width: 1000px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.overlay h1 {
+    font-size: 3em;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+button {
+    --hov: 0; 
+    --t: 0.4s; 
+
+    display: grid;
+    grid-template-columns: calc(0.375em + var(--hov) * 1.5em) 1fr;
+    gap: 0.75em; 
+    align-items: center;
+    
+    width: 100%; 
+    border: none;
+    padding: 0.75em;
+    border-radius: 50em; 
+
+    background: color-mix(in hsl, #5a5a5a calc(var(--hov)*100%), #fefefe);
+    color: #0e0a0e;
+    font: 700 1.2em/1.375 'Ubuntu', sans-serif;
+
+    transition: var(--t) ease-out;
+    transition-delay: calc((1 - var(--hov)) * 0.5 * var(--t)), 0s;
+    transition-property: grid-template-columns, background-color;
+    cursor: pointer;
+}
+/* transition of button*/
+button::before {
+    content: attr(data-ico); 
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #0e0a0e;
+    color: hsla(0, 0%, 100%, var(--hov));
+    font-weight: 100;
+    font-size: 1.5em;
+    text-indent: calc((var(--hov) - 1) * 1em);
+    clip-path: circle(closest-side);
+
+    transition: inherit;
+    transition-delay: calc(var(--hov) * 0.5 * var(--t));
+    transition-property: color, text-indent;
+}
+
+button:hover, button:focus {
+    --hov: 1;
+}
+
+.overlay h2 {
+    font-size: 2em;
+    color: #a29bfe;
+    margin-top: 30px;
+}
+
+.overlay p, .overlay li {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.overlay code {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 8px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: #50fa7b; 
+}
+
+ img {
+    border-radius: 15px;
+ }

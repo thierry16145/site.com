@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL DCL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <img src="img/Design sem nome.png" alt="MySQL" width="300" >
+        <a href="index.html">
+            <button>Início</button>
+        </a>
+        <a href="index-DDL.html">
+            <button>Comandos DDL</button>
+        </a>
+        <a href="index-DML.html">
+            <button>Comandos DML</button>
+        </a>
+        <a href="index-DCL.html">
+            <button>Comandos DCL</button>
+        </a>
+        <a href="index-function.html">
+            <button>Função Agregada</button>
+        </a>
+        <a href="index-Datatype.html">
+            <button>Tipo de Data</button>
+        </a>
+        <a href="index-final.html">
+            <button>Finalização</button>
+        </a>
+    </nav>
+
+    <main class="content">
+        <div class="overlay">
+            <h1>Guia de SQL</h1>
+            
+            <h2>DCL: A Linguagem do Gerente de Segurança</h2>
+            <p>
+                A linguagem <strong>DCL (Data Control Language)</strong> cuida da segurança e permissões de acesso. Pense nela como o gerente de segurança da biblioteca que decide quem pode fazer o quê. Ela se baseia em três comandos principais.
+            </p>
+            
+            <ul>
+                <li>
+                    <strong>GRANT (Dar Acesso):</strong> Para dar a chave e permitir que um usuário acesse um livro ou prateleira. <br>
+                    Exemplo: <code>GRANT SELECT ON Livros TO bibliotecario;</code>
+                </li>
+                <li>
+                    <strong>DENY (Proibir):</strong> Para proibir um usuário de realizar uma ação específica, mesmo se ele tiver acesso geral. <br>
+                    Exemplo: <code>DENY DELETE ON Livros TO bibliotecario;</code>
+                </li>
+                <li>
+                    <strong>REVOKE (Tirar o Acesso):</strong> Para pegar a chave de volta e remover uma permissão que foi concedida anteriormente. <br>
+                    Exemplo: <code>REVOKE INSERT ON Livros FROM bibliotecario;</code>
+                </li>
+            </ul>
+
+            <p>
+                Em resumo, <strong>GRANT</strong> para dar, <strong>DENY</strong> para proibir e <strong>REVOKE</strong> para tirar. A DCL é essencial para manter a segurança de qualquer sistema.
+            </p>
+            <img src="img/hq720.jpg" alt="DCL" width="1000">
+        </div>
+    </main>
+
+</body>
+</html>

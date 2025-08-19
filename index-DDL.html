@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="sidebar">
+        <img src="img/Design sem nome.png" alt="MySQL" width="300" >
+        <a href="index.html">
+            <button>Início</button>
+        </a>
+        <a href="index-DDL.html">
+            <button>Comandos DDL</button>
+        </a>
+        <a href="index-DML.html">
+            <button>Comandos DML</button>
+        </a>
+        <a href="index-DCL.html">
+            <button>Comandos DCL</button>
+        </a>
+        <a href="index-function.html">
+            <button>Função Agregada</button>
+        </a>
+        <a href="index-Datatype.html">
+            <button>Tipo de Data</button>
+        </a>
+        <a href="index-final.html">
+            <button>Finalização</button>
+        </a>
+        
+    </nav>
+
+    <main class="content">
+        <div class="overlay">
+            <h1>Guia de SQL</h1>
+            <p>
+                Esta página estrutura os principais comandos SQL para manipulação e definição de dados. Pense no SQL como a linguagem que você usa para conversar com um banco de dados, como se fosse uma grande biblioteca digital.
+            </p>
+            
+            <hr style="border-color: rgba(255,255,255,0.2); margin: 30px 0;">
+
+            <h2>DDL: A Linguagem do Arquiteto</h2>
+            <p>
+                A <strong>DDL (Data Definition Language)</strong> é o conjunto de comandos que funciona como o arquiteto da biblioteca. Ele não mexe nos livros (os dados), mas sim nas prateleiras e nos armários (a estrutura) que guardam os livros.
+            </p>
+
+            <ul>
+                <li>
+                    <strong>CREATE (Construir):</strong> Usado para construir uma nova "prateleira" (tabela) para guardar os seus dados. <br>
+                    Exemplo: <code>CREATE TABLE Livros (...);</code>
+                </li>
+                <li>
+                    <strong>ALTER (Modificar):</strong> Serve para modificar uma "prateleira" que já existe. Se você precisar de um novo espaço ou uma nova etiqueta (coluna), o ALTER faz esse ajuste. <br>
+                    Exemplo: <code>ALTER TABLE Livros ADD COLUMN Ano INT;</code>
+                </li>
+                <li>
+                    <strong>DROP (Derrubar):</strong> É para quando você não precisa mais de uma prateleira e decide removê-la por completo. <strong>Atenção:</strong> ao fazer isso, você também remove todos os livros que estavam nela! <br>
+                    Exemplo: <code>DROP TABLE Livros;</code>
+                </li>
+            </ul>
+
+            <p>
+                Em resumo, <strong>CREATE</strong> para construir, <strong>ALTER</strong> para modificar e <strong>DROP</strong> para derrubar a estrutura do seu banco de dados.
+            </p>
+            <img src="img/instrucoesddl.png" alt="DDL" width="1000">
+        </div>
+    </main>
+</body>
+</html>
